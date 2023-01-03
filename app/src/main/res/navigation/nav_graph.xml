@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListPhotosFragment">
+
+    <fragment
+        android:id="@+id/TakePhotoFragment"
+        android:name="go.skillbox.customcamera.ui.fragments.CameraFragment"
+        android:label="@string/camera_fragment_label"
+        tools:layout="@layout/fragment_camera">
+
+        <action
+            android:id="@+id/action_TakePhotoFragment_to_fullscreenPhotoFragment"
+            app:destination="@id/fullscreenPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListPhotosFragment"
+        android:name="go.skillbox.customcamera.ui.fragments.ListPhotosFragment"
+        android:label="@string/list_photos_fragment_label"
+        tools:layout="@layout/fragment_list_photos">
+
+        <action
+            android:id="@+id/action_ListPhotosFragment_to_TakePhotoFragment"
+            app:destination="@id/TakePhotoFragment" />
+        <action
+            android:id="@+id/action_ListPhotosFragment_to_confirmPermissionsFragment"
+            app:destination="@id/confirmPermissionsFragment" />
+        <action
+            android:id="@+id/action_ListPhotosFragment_to_fullscreenPhotoFragment"
+            app:destination="@id/fullscreenPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPermissionsFragment"
+        android:name="go.skillbox.customcamera.ui.fragments.ConfirmPermissionsFragment"
+        android:label="@string/confirm_permissions_fragment_label"
+        tools:layout="@layout/fragment_confirm_permissions" />
+    <fragment
+        android:id="@+id/fullscreenPhotoFragment"
+        android:name="go.skillbox.customcamera.ui.fragments.FullscreenPhotoFragment"
+        android:label="Fullscreen photo"
+        tools:layout="@layout/fragment_fullscreen_photo" />
+</navigation>

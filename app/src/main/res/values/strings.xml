@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CustomCamera</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="camera_fragment_label">Camera</string>
+    <string name="list_photos_fragment_label">Photos</string>
+    <string name="confirm_permissions_fragment_label">Confirm permissions</string>
+    <string name="take_photo">Take PHOTO</string>
+    <string name="new_photo_button">New photo</string>
+    <string name="permissions_fragment_info_text">
+        Permissions must be granted for the application to work.
+    </string>
+    <string name="confirm_permissions_button_text">Confirm Permissions</string>
+</resources>
